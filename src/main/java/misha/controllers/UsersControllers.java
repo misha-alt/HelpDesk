@@ -43,6 +43,13 @@ public class UsersControllers {
 
     }
 
+    @RequestMapping("/logout")
+    public String logout(){
+
+
+        return "redirect:/makeTest";
+    }
+
 
     @RequestMapping("/newCom")
     public String newComent(Model model, Principal principal){

@@ -1,5 +1,8 @@
 package misha.domain;
 
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -11,6 +14,8 @@ public class Ticked   {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(unique = true, nullable =  false)
     private int id;
+    @NotEmpty(message = "Name should not be empty")
+    @Size(min = 2, max = 30, message = "Name should de between 2 ang 30 characters")
     @Column( nullable = false)
     private String assignee;
     @Column(nullable = false)

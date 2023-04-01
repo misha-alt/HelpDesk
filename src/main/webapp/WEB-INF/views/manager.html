@@ -50,14 +50,6 @@
     <a th:text="${viewOB.getId()} +' '+${viewOB.getLoginOfcreater()} + ' '+${viewOB.getApprover()} +' '+${viewOB.getState()}+' '+${viewOB.getUrgency()}"></a>
 </div>
 
-<!--
-<br/>
-<a th:href="@{/sotrByUrgense}">sort by urgency</a>
-<br/>
-<a th:href="@{/sortById}">sort by ID</a>
-<br/>
-<a th:href="@{/sortByDate}">sort by date</a>
--->
 
 <a>Sorted</a>
 
@@ -67,6 +59,7 @@
 
     <option value="one">one</option>
     <option value="two">two</option>
+    <option value="three">three</option>
 
 </select>
     <input type="submit" value="Create"/>

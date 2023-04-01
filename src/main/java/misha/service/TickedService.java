@@ -111,6 +111,9 @@ public class TickedService {
          if(var.equals("two")){
             return sortedListById(principal);
          }
+           if(var.equals("three")){
+               return sortedByDate(principal);
+           }
 
     return  null;
 
@@ -144,7 +147,7 @@ public class TickedService {
         List list =managerAsAppruverAndStateDeclin(userService
                 .getByLogin(principal.getName()).get(0).getLogin());
 
-        List list1 = new ArrayList();
+      /*  List list1 = new ArrayList();
 
         for(int i=0 ;i<list.size();i++){
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat();
@@ -158,8 +161,12 @@ public class TickedService {
 
         }
         Collections.sort(list1);
-        return list1;
+        return list1;*/
+      DataComp dataComp = new DataComp();
+       list.sort(dataComp);
+        return list;
     }
+
 
     public List<Ticked> filteredListByCriteria(Object someCreteria) {
 
