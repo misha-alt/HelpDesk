@@ -1,6 +1,10 @@
 package misha.service;
 
+<<<<<<< HEAD
 import jakarta.validation.constraints.Max;
+=======
+
+>>>>>>> origin/master
 import misha.domain.Ticked;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -25,4 +29,8 @@ public class EmpioyeeService {
         return query.list();
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master
